@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Highcharts Example</title>
+
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $.ajax({
+      url : "iautos/getUsedCarPrice/trimId/10/area/北京",
+      cache : false,
+      dataType : "json",
+      success : function(data) {
+        $('#container').highcharts({
+          chart : {
+            type : 'line',
+            marginRight : 130,
+            marginBottom : 25
+          },
+          title : {
+            text : '第一车网价格趋势',
+            x : -20
+          //center
+          },
+          subtitle : {
+            text : 'site: www.iautos.cn',
+            x : -20
+          },
+          xAxis : {
+            categories : data.categories
+          },
+          yAxis : {
+            title : {
+              text : '单位（万）'
+            },
+            plotLines : [ {
+              value : 0,
+              width : 1,
+              color : '#808080'
+            } ]
+          },
+          tooltip : {
+            valueSuffix : '万'
+          },
+          legend : {
+            layout : 'vertical',
+            align : 'right',
+            verticalAlign : 'top',
+            x : -10,
+            y : 100,
+            borderWidth : 0
+          },
+          series : [ {
+            name : '卖出',
+            data : data.sells
+          }, {
+            name : '买入',
+            data : data.buys
+          } ]
+        });
+      }
+    });
+
+  });
+</script>
+</head>
+<body>
+	<script src="javascript/highchart/highcharts.js"></script>
+	<script src="javascript/highchart/modules/exporting.js"></script>
+
+	<div id="container"
+		style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
+</body>
+</html>

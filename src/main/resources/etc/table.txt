@@ -1,0 +1,41 @@
+tt_naire
+id int 10
+name varchar 200
+summary varchar 200
+time int 10 (同一ip多长时间后可以再次问卷)
+createDate date
+updateDate date
+
+tr_naire_question
+id int 10
+naire_id int 10
+question_id int 10
+
+tt_question
+id int 10
+stem varchar 200
+most int 10
+
+tt_option
+id int 10
+question_id int 10
+stem varchar 200
+
+tr_naire_ip
+id int 10
+naire_id int 10
+ip varchar 200
+time date
+
+tt_result
+id int 10
+naire_id int 10
+option_id int 10
+result int 1
+
+tm_admin
+id int 10
+username varchar 200
+password varchar 200
+
+统计的搞个视图就好了
