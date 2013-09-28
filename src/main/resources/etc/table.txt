@@ -1,40 +1,39 @@
 tt_naire
-id int 10
+id int 11
 name varchar 200
 summary varchar 200
-time int 10 (同一ip多长时间后可以再次问卷)
-createDate date
-updateDate date
+time int 11 (同一ip多长时间后可以再次问卷)
+status (是否开启)
 
 tr_naire_question
-id int 10
-naire_id int 10
-question_id int 10
+id int 11
+naire_id int 11
+question_id int 11
 
 tt_question
-id int 10
+id int 11
 stem varchar 200
-most int 10
+most int 11
 
 tt_option
-id int 10
-question_id int 10
+id int 11
+question_id int 11
 stem varchar 200
 
 tr_naire_ip
-id int 10
-naire_id int 10
+id int 11
+naire_id int 11
 ip varchar 200
 time date
 
 tt_result
-id int 10
-naire_id int 10
-option_id int 10
+id int 11
+naire_id int 11
+option_id int 11
 result int 1
 
 tm_admin
-id int 10
+id int 11
 username varchar 200
 password varchar 200
 
