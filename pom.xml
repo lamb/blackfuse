@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.mynah</groupId>
 	<artifactId>blackfuse</artifactId>
@@ -21,7 +20,7 @@
 		<server.id>tomcat</server.id>
 		<version.tomcat6-maven-plugin>2.1</version.tomcat6-maven-plugin>
 		<!-- Spring version -->
-		<version.spring>3.2.3.RELEASE</version.spring>
+		<version.spring>3.2.4.RELEASE</version.spring>
 
 		<!-- Test -->
 		<version.junit>4.8.2</version.junit>
@@ -34,6 +33,7 @@
 		<version.servlet>2.5</version.servlet>
 		<version.jstl>1.2</version.jstl>
 		<version.standard.taglibs>1.1.2</version.standard.taglibs>
+		<version.freemarker>2.3.19</version.freemarker>
 		<version.aspectjweaver>1.7.1</version.aspectjweaver>
 		<version.hibernate-validator>5.0.1.Final</version.hibernate-validator>
 		<version.cglib>2.2.2</version.cglib>
@@ -153,6 +153,11 @@
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>
 			<version>${version.standard.taglibs}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${version.freemarker}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.aspectj</groupId>

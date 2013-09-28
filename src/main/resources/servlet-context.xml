@@ -23,10 +23,10 @@
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler />
 
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/WEB-INF/jsp/" />
-		<property name="suffix" value=".jsp" />
+	<bean id="ftlViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="cache" value="true" />
+		<property name="suffix" value=".ftl" />
+		<property name="contentType" value="text/html; charset=utf-8" />
 	</bean>
 	<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
 		<property name="objectMapper">
